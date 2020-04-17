@@ -1,18 +1,7 @@
-# Hide
-
-To start your Phoenix server:
-
-  * Setup the project with `mix setup`
-  * Start Phoenix endpoint with `mix phx.server`
-
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
-
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
-
-## Learn more
-
-  * Official website: https://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Forum: https://elixirforum.com/c/phoenix-forum
-  * Source: https://github.com/phoenixframework/phoenix
+Reproduction steps:
+1. mix deps.get
+2. npm install --prefix=assets
+3. iex -S mix phx.server
+4. Go to http://localhost:4000
+5. Tap on the black rectangle
+6. The "Menu" text disappears
