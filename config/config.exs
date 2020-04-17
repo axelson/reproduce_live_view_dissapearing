@@ -7,9 +7,6 @@
 # General application configuration
 use Mix.Config
 
-config :hide,
-  ecto_repos: [Hide.Repo]
-
 # Configures the endpoint
 config :hide, HideWeb.Endpoint,
   url: [host: "localhost"],

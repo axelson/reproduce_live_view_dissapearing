@@ -7,8 +7,6 @@ defmodule Hide.Application do
 
   def start(_type, _args) do
     children = [
-      # Start the Ecto repository
-      Hide.Repo,
       # Start the Telemetry supervisor
       HideWeb.Telemetry,
       # Start the PubSub system
