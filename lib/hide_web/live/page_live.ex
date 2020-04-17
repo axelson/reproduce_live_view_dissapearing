@@ -3,10 +3,15 @@ defmodule HideWeb.PageLive do
 
   @impl true
   def mount(_params, _session, socket) do
-    {:ok, assign(socket, query: "", results: %{})}
+    {:ok, assign(socket, menu: false, show_rect: nil)}
   end
 
   @impl true
+  def handle_event("show-rect", _, socket) do
+    socket = assign(socket, show_rect: true)
+    {:noreply, socket}
+  end
+
   def handle_event("suggest", %{"q" => query}, socket) do
     {:noreply, assign(socket, results: search(query), query: query)}
   end
@@ -23,6 +28,11 @@ defmodule HideWeb.PageLive do
          |> put_flash(:error, "No dependencies found matching \"#{query}\"")
          |> assign(results: %{}, query: query)}
     end
+  end
+
+  def image do
+    Routes.static_url(HideWeb.Endpoint, "/images/phoenix.png")
+    |> IO.inspect(label: "static")
   end
 
   defp search(query) do
