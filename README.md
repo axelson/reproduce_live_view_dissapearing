@@ -3,7 +3,8 @@ Reproduction steps:
 2. npm install --prefix=assets
 3. iex -S mix phx.server
 4. Go to http://localhost:4000
-5. Tap on "opt1"
-6. The "Menu" text disappears ("opt1" and "option 2")
+5. The phoenix logo and rectangle should appear
+6. Wait ~2 seconds
+7. The phoenix logo and rectangle disappear
 
-Instead the menu is not expected to disappear
+Instead the logo and rectangle should not disappear

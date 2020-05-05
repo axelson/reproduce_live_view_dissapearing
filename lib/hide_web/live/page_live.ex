@@ -3,6 +3,7 @@ defmodule HideWeb.PageLive do
 
   @impl true
   def mount(_params, _session, socket) do
+    if connected?(socket), do: Process.sleep(2000)
     {:ok, assign(socket, menu: false, show_rect: nil)}
   end
 

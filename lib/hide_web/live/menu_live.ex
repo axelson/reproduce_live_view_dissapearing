@@ -7,7 +7,12 @@ defmodule HideWeb.MenuLive do
 
   def render(assigns) do
     ~L"""
-    <image id="image" href="<%= @href %>"></image>
+    <image href="<%= @href %>"></image>
     """
+
+    # If you instead render another rect everything is fine
+    # ~L"""
+    # <rect x="10" y="10" width="20" height="20"></rect>
+    # """
   end
 end
